@@ -1,0 +1,283 @@
+/* Estilos Gerais - Identidade Visual Banco Senac */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #002b49 0%, #004b87 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 380px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Logótipo e Cabeçalho */
+.banco-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logo-senac {
+    max-width: 280px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.banco-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #e6f0fa;
+    color: #0056b3;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.titulo-secao {
+    color: #003366;
+    font-size: 1.2rem;
+    margin: 10px 0 15px 0;
+    text-align: left;
+}
+
+/* Campos e Grupos de Formulário com Rótulos */
+.campo-grupo {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 3px;
+}
+
+.campo-grupo input {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Inputs globais (fora de grupos) */
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+.campo-grupo input:focus {
+    border-color: #0056b3;
+}
+
+button {
+    width: 100%;
+    padding: 11px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #003f8a;
+}
+
+.mensagem-erro {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+/* Links de Alternância */
+.link-alternativa {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+.link-alternativa a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-alternativa a:hover {
+    text-decoration: underline;
+}
+
+/* Tela de Sucesso / Análise */
+.status-container {
+    text-align: center;
+    padding: 15px 5px;
+}
+
+.icone-relogio {
+    margin: 15px 0 10px 0;
+}
+
+.status-container h2 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.texto-analise {
+    color: #495057;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.texto-analise-sub {
+    color: #6c757d;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+#btn-voltar-inicio {
+    background-color: #0056b3;
+    margin-top: 10px;
+}
+
+#btn-voltar-inicio:hover {
+    background-color: #003f8a;
+}
+
+/* Painel / Dashboard Personalizado */
+.painel-header {
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.painel-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.logo-senac-mini {
+    max-width: 190px;
+    max-height: 72px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.badge-banco {
+    background-color: #e6f0fa;
+    color: #0056b3;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#boas-vindas {
+    color: #212529;
+    font-size: 1.2rem;
+    margin: 4px 0 0 0;
+    text-align: left;
+}
+
+.saldo-box {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.saldo-box p {
+    margin: 0 0 4px 0;
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+#saldo-valor {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.operacoes {
+    text-align: left;
+    background: #fafbfc;
+    border: 1px solid #edf2f7;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.operacoes h3 {
+    font-size: 0.85rem;
+    color: #495057;
+    margin: 0 0 6px 0;
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.botoes button {
+    margin-top: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e9ecef;
+    margin: 12px 0;
+}
+
+#btn-sair {
+    background-color: #dc3545;
+    margin-top: 15px;
+}
+
+#btn-sair:hover {
+    background-color: #a71d2a;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco SENAC - Conta Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        
+        <!-- 1. SEÇÃO DE LOGIN -->
+        <section id="login-section">
+            <div class="banco-logo-container">
+                <img src="senac-logo.png" alt="Logótipo Senac" class="logo-senac">
+                <div class="banco-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0056b3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+                    </svg>
+                    <span>Banco Digital</span>
+                </div>
+            </div>
+            
+            <p class="subtitle">Portal do Cliente</p>
+
+            <input type="text" id="input-cpf" placeholder="CPF (ex: 111.222.333-44)">
+            <input type="password" id="input-senha" placeholder="Senha">
+            <button id="btn-login">Entrar</button>
+            <p id="login-erro" class="mensagem-erro" style="display: none;">CPF ou senha inválidos!</p>
+
+            <p class="link-alternativa">
+                Ainda não é cliente? <a href="#" id="link-ir-cadastro">Abra sua conta</a>
+            </p>
+        </section>
+
+        <!-- 2. SEÇÃO DE CADASTRO / ABERTURA DE CONTA -->
+        <section id="cadastro-section" style="display: none;">
+            <div class="painel-topo">
+                <img src="senac-logo.png" alt="Logótipo Senac" class="logo-senac-mini">
+                <span class="badge-banco">Banco SENAC</span>
+            </div>
+            
+            <h2 class="titulo-secao">Registo de Novo Cliente</h2>
+
+            <form id="form-cadastro">
+                <div class="campo-grupo">
+                    <label for="cad-nome">Nome Completo</label>
+                    <input type="text" id="cad-nome" placeholder="Ex: Maria Silva">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-cpf">CPF</label>
+                    <input type="text" id="cad-cpf" placeholder="000.000.000-00">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-email">E-mail</label>
+                    <input type="email" id="cad-email" placeholder="exemplo@email.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-celular">Celular</label>
+                    <input type="text" id="cad-celular" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-cep">CEP</label>
+                    <input type="text" id="cad-cep" placeholder="00000-000">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-endereco">Endereço</label>
+                    <input type="text" id="cad-endereco" placeholder="Ex: Av. Paulista, 1000 - Apto 42">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-cidade">Cidade</label>
+                    <input type="text" id="cad-cidade" placeholder="Ex: São Paulo">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-estado">Estado (UF)</label>
+                    <input type="text" id="cad-estado" placeholder="Ex: SP">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-senha">Senha</label>
+                    <input type="password" id="cad-senha" placeholder="Mín. 8 caracteres">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cad-confirma-senha">Confirmar Senha</label>
+                    <input type="password" id="cad-confirma-senha" placeholder="Digite a senha novamente">
+                </div>
+                
+                <button type="submit" id="btn-cadastrar">Concluir Registo</button>
+            </form>
+
+            <p class="link-alternativa">
+                Já tem uma conta? <a href="#" id="link-voltar-login">Faça login</a>
+            </p>
+        </section>
+
+        <!-- 3. TELA DE SUCESSO / CONTA EM ANÁLISE -->
+        <section id="sucesso-section" style="display: none;">
+            <div class="painel-topo">
+                <img src="senac-logo.png" alt="Logótipo Senac" class="logo-senac-mini">
+                <span class="badge-banco">Banco SENAC</span>
+            </div>
+
+            <div class="status-container">
+                <div class="icone-relogio">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h2>Cadastro em Análise!</h2>
+                <p class="texto-analise">
+                    Recebemos os seus dados com sucesso. A nossa equipe de segurança está a analisar as informações para a abertura da sua conta digital.
+                </p>
+                <p class="texto-analise-sub">
+                    Entraremos em contato através do e-mail e telefone cadastrados assim que o processo for concluído.
+                </p>
+
+                <button id="btn-voltar-inicio">Voltar ao Início</button>
+            </div>
+        </section>
+
+        <!-- 4. PAINEL DO CLIENTE (DASHBOARD) -->
+        <section id="painel-section" style="display: none;">
+            <div class="painel-header">
+                <div class="painel-topo">
+                    <img src="senac-logo.png" alt="Logótipo Senac" class="logo-senac-mini">
+                    <span class="badge-banco">Banco SENAC</span>
+                </div>
+                <h2 id="boas-vindas">Olá, Cliente</h2>
+            </div>
+            
+            <div class="saldo-box">
+                <p>Saldo Disponível</p>
+                <strong id="saldo-valor">R$ 0,00</strong>
+            </div>
+
+            <div class="operacoes">
+                <h3>Operações Bancárias</h3>
+                <input type="number" id="valor-op" placeholder="Valor R$" step="0.01" min="0">
+                
+                <div class="botoes">
+                    <button id="btn-depositar">Depositar</button>
+                    <button id="btn-sacar">Sacar</button>
+                </div>
+
+                <hr>
+                <h3>Transferência</h3>
+                <input type="text" id="conta-destino" placeholder="CPF do Favorecido">
+                <button id="btn-transferir">Transferir</button>
+            </div>
+
+            <button id="btn-sair">Sair</button>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
